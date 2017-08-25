@@ -22,16 +22,16 @@ passport.use(new Auth0Strategy({
 
   db.users.readUser([profile.id]).then(res => {
     if(!res.length) {
-      // db.users.createUser([profile.id, profile.displayName, profile.emails[0].value, profile.picture]);
+      db.users.createUser([profile.id, profile.displayName, profile.emails[0].value, profile.picture]);
     }
   return done(null, profile);
   });
 
-  // app.get('/api/user', (req, res) => {
-  //   db.users.readUser([profile.id]).then(userData => {
-  //     res.send(userData);
-  //   });
-  // });
+  app.get('/api/user', (req, res) => {
+    db.users.readUser([profile.id]).then(userData => {
+      res.send(userData);
+    });
+  });
 
 }));
 
