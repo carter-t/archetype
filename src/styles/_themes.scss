@@ -1,0 +1,134 @@
+// Themes
+
+$c0: #34495E;
+$c1: #1F618D;
+$c2: #6C3483;
+$c3: #148F77;
+$c4: #0E6655;
+$c5: #B03A2E;
+
+$c0-i: #cbb6a1;
+$c1-i: #e09e72;
+$c2-i: #93cb7c;
+$c3-i: #eb7088;
+$c4-i: #f199aa;
+$c5-i: #4fc5d1;
+
+$s0: #fff;
+$s1: #000;
+$s2: #555;
+$s3: #888;
+$s4: #aaa;
+$s5: #ccc;
+
+$_CG: #33ff66;
+$_T: transparent;
+
+$text1: 'Iceland', sans-serif;
+$text2: 'Bitter', serif;
+$text3: 'Baloo Bhaina', sans-serif;
+$text4: 'Gruppo', sans-serif;
+
+$console: 'Courier New', serif;
+
+// Desktop Filter
+@media (min-width: 800px) {
+  body::-webkit-scrollbar {
+    width: 1vw;
+    background: $c0;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: $c1;
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background: $c5-i;
+  }
+}
+
+@mixin form($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin fill {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flex($x, $y) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}
+
+@mixin row($x, $y) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}
+
+@mixin column($x, $y) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $x;
+  align-items: $y;
+}
+
+@mixin fit {
+  display: flex;
+  justify-content: default;
+  align-items: default;
+}
+
+@mixin colors($b, $t) {
+  background: $b;
+  color: $t;
+}
+
+@mixin text($f, $s) {
+  font-family: $f;
+  font-size: $s;
+}
+
+@mixin image($url) {
+  background-image: url($url);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+// Slider
+
+@mixin slide($x-axis, $y-axis, $width, $height) {
+  position: fixed;
+  top: $y-axis;
+  margin-top: -$height / 2;
+  left: $x-axis;
+  margin-left: -$width / 2;
+}
+
+@mixin top {
+  position: fixed;
+  top: 0;
+}
+
+@mixin bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+@mixin left {
+  position: fixed;
+  left: 0;
+}
+
+@mixin right {
+  position: fixed;
+  right: 0;
+}
+
+@mixin lift {
+  position: fixed;
+  z-index: 1000
+}

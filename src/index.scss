@@ -1,0 +1,21 @@
+// SCSS INDEX
+
+// Libraries
+@import './styles/_reset.scss';
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+@import url('https://fonts.googleapis.com/css?family=Iceland');
+@import url('https://fonts.googleapis.com/css?family=Gruppo');
+@import './styles/_themes.scss';
+@import './styles/_animate.scss';
+
+// Components
+@import './components/Body/Landing/_Landing.scss';
+@import './components/Body/Header/_Header.scss';
+@import './components/Body/Slider/_Slider.scss';
+@import './components/Body/Break/_Break.scss';
+@import './components/Body/Footer/_Footer.scss';
+
+@import './components/Pages/Home/_Home.scss';
+// @import './components/Cube/_Cube.scss';
+@import './components/Buttons/_Buttons.scss';

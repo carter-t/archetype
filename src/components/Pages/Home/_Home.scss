@@ -1,0 +1,48 @@
+.home {
+  @include form(100%, 120vh);
+
+  .center {
+    @include fill;
+    @include flex(center, default);
+    @include image('./images/3kings.jpg');
+    padding-top: 5vh;
+  }
+
+  .content {
+    @include form(50vw, 50vh);
+    @include colors($c1, $s0);
+    @include text($text2, 5vmin);
+    @include flex(center, center);
+    border-radius: 10px;
+  }
+
+  .side {
+    @include form(2vw, 112vh);
+    @include colors($c1, $s0);
+    opacity: 0.4;
+  } .left {
+      @extend .side;
+      @include left;
+    }
+    .right {
+      @extend .side;
+      @include right;
+    }
+}
+
+// Mobile Filter
+@media (max-width: 800px) {
+  .home {
+    .left {
+      display: none;
+    }
+    .right {
+      display: none;
+    }
+  }
+}
+
+// Desktop Filter
+@media (min-width: 800px) {
+
+}
